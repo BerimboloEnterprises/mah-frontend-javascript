@@ -164,14 +164,31 @@ function Triangle(height, width){
   console.log(triangle.area());
   }
 
+// Part 10 return arrays
+
+var attributesFromObject1 = attributes(obj1);
+
   function attributes(obj){
+    var temp = [];
+    for(var attributes in obj){
+      temp.push(attributes);
+    }
+    return temp;
+    };
+
     var obj1 = {
       width: 15,
       height: 1337
     };
-    var index, length;
+
     var attributesFromObject1 = attributes(obj1);
-    obj1.forEach( function (arrayItem){
-      console.log(arrayItem);
-    });
-  }
+    console.log(attributesFromObject1);
+
+    var obj2 = {
+      a: 1,
+      b: 2,
+      c: 3
+    };
+
+    var attributesFromObject2 = attributes(obj2);
+    console.log(attributesFromObject2);
