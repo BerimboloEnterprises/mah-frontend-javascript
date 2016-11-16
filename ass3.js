@@ -8,13 +8,18 @@
   var errorButton = document.getElementById("error");
   var infoButton = document.getElementById("info");
   var addItemButton = document.getElementById("add-item");
-  var remoiveItemButton = document.getElementById("remove-item");
+  var removeItemButton = document.getElementById("remove-item");
+  var buttons = document.getElementsByClassName("remove-list-item");
 
+  for(var i = 0; i < buttons.length; i++){
+    buttons[i].addEventListener("click", removeElementFromList, false);
+  }
+  
   succesButton.addEventListener("click",function() { changeDiv("success")}, false);
   errorButton.addEventListener("click", function() { changeDiv("error")}, false);
   infoButton.addEventListener("click", function() { changeDiv("info")}, false);
   addItemButton.addEventListener("click", promptMessage, false);
-  remoiveItemButton.addEventListener("click", removeItemInList, false);
+  removeItemButton.addEventListener("click", removeItemInList, false);
 
 // Function for changing the Div tag
 function changeDiv(button){
@@ -44,3 +49,12 @@ function removeItemInList(){
     theList.removeChild(theList.lastElementChild);
   }
 }
+// Part 4 Remove element using this
+
+// Removes an element from a list, after user confirmation.
+	function removeElementFromList(){
+		if(window.confirm("Are you certain you want to remove this?")){
+			var parentNode = buttons.parentNode;
+			this.parentNode.remove(this);
+		}
+	}
