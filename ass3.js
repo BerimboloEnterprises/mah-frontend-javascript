@@ -14,7 +14,7 @@
   for(var i = 0; i < buttons.length; i++){
     buttons[i].addEventListener("click", removeElementFromList, false);
   }
-  
+
   succesButton.addEventListener("click",function() { changeDiv("success")}, false);
   errorButton.addEventListener("click", function() { changeDiv("error")}, false);
   infoButton.addEventListener("click", function() { changeDiv("info")}, false);
@@ -53,8 +53,11 @@ function removeItemInList(){
 
 // Removes an element from a list, after user confirmation.
 	function removeElementFromList(){
-		if(window.confirm("Are you certain you want to remove this?")){
+
+		if(window.confirm("By clicking yes you are allowing the almighty Lord to remove this  taint!")){
 			var parentNode = buttons.parentNode;
 			this.parentNode.remove(this);
 		}
 	}
+
+    // Part 5 Forms

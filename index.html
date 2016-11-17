@@ -18,7 +18,7 @@
       <li>The first item is free!</li>
     </ul>
 
-    <ul>
+<ul>
     <li>
         This is the first item
         <button type="button" class="remove-list-item">X</button>
@@ -42,6 +42,25 @@
       <button type="button" id="info">Info</button>
       <button type="button" id="add-item">Add item</button>
       <button type="button" id="remove-item">Remove Last entry</button>
+
+    <form action="" method="get" id="apply-for-pet">
+    <h2>Ansökan om att skaffa husdjur</h2>
+    <input type="text" name="firstname"> First name<br>
+    <input type="text" name="lastname"> Surname<br>
+    <input type="text" name="age"> Age<br>
+    <input type="text" name="email"> E-mail<br>
+
+    <div id="pets">
+        <p>Typ av husdjur?</p>
+        <input type="radio" name="pet" value="dog"> Dog<br>
+        <input type="radio" name="pet" value="cat"> Cat<br>
+        <input type="radio" name="pet" value="fish"> Fish<br>
+        <input type="radio" name="pet" value="bird"> Bird<br>
+    </div>
+
+    <button type="submit">Send request</button>
+</form>
+
 
       <script src="ass3.js"></script>
 
